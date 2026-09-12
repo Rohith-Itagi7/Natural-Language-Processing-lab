@@ -1,0 +1,33 @@
+import nltk
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+from nltk.corpus import wordnet
+
+# Run these once
+nltk.download("wordnet")
+nltk.download("omw-1.4")
+
+words = [
+    "playing",
+    "played",
+    "plays",
+    "studies",
+    "studying",
+    "running",
+    "runs",
+    "easily",
+    "fairly",
+    "computers",
+    "understanding"
+]
+
+stemmer = PorterStemmer()
+lemmatizer = WordNetLemmatizer()
+
+print(f"{'Word':<15}{'Stem':<15}{'Lemma':<15}")
+print("-" * 45)
+
+for word in words:
+    stem = stemmer.stem(word)
+    lemma = lemmatizer.lemmatize(word, pos=wordnet.VERB)
+
+    print(f"{word:<15}{stem:<15}{lemma:<15}")
