@@ -57,3 +57,4 @@ for similar_word, similarity in model.wv.most_similar(
     word, topn=5
 ):
     print(f"{similar_word}: {similarity:.4f}")
+//
