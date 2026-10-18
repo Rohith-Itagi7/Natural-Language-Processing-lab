@@ -106,4 +106,4 @@ for sentence in test_sentences:
 
     print("Text:", sentence)
     print("Sentiment:", prediction)
-    print()
+    print(
